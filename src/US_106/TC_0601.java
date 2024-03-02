@@ -17,11 +17,11 @@ public class TC_0601 extends BaseDriver {
 
 
         WebElement eMail = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("input[id='life']"))));
-        eMail.sendKeys("samfromda01@hotmail.com");
+        eMail.sendKeys("testnomads01@gmail.com");
 
 
         WebElement password = driver.findElement(By.cssSelector("input[class='t'][id='lifp']"));
-        password.sendKeys("lokmaciSeni1");
+        password.sendKeys("Nomad44++");
 
 
         WebElement logInButton = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//input[@id='lfb']"))));
@@ -36,7 +36,7 @@ public class TC_0601 extends BaseDriver {
         mesajlar.click();
 
         WebElement inBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#C4w>div>p")));
-        Assert.assertTrue("hata", inBox.getText().equals("Listelenecek mesaj bulunamadÄ±."));
+        Assert.assertTrue("hata", inBox.getText().equals("Listelenecek mesaj bulunamadı."));
         WaitAndClose();
     }
 }
