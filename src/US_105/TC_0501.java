@@ -39,7 +39,6 @@ public class TC_0501 {
         WebElement message = driver.findElement(By.cssSelector("[class='no-record']"));
         Assert.assertTrue("Mesaj bulunamadı.", message.getText().equals("Kayıtlı siparişiniz bulunmuyor."));
 
-
         WaitAndClose();
     }
 }
