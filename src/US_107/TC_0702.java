@@ -15,7 +15,7 @@ public class TC_0702 extends BaseDriver {
 
         driver.findElement(By.xpath("//a[text()='Giriş Yap']")).click();
         driver.findElement(By.cssSelector("input[id='life']")).sendKeys("testnomads01@gmail.com");
-        driver.findElement(By.cssSelector("input[id='lifp']")).sendKeys("Nomad44++");
+        driver.findElement(By.cssSelector("input[id='lifp']")).sendKeys("Nomad07++");
         driver.findElement(By.xpath("//input[@id='lfb']")).click();
         driver.findElement(By.linkText("Test")).click();
         driver.findElement(By.linkText("Hesabımı Sil")).click();

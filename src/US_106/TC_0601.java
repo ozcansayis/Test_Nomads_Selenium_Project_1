@@ -19,7 +19,7 @@ public class TC_0601 extends BaseDriver {
         eMail.sendKeys("testnomads01@gmail.com");
 
         WebElement password = driver.findElement(By.cssSelector("input[class='t'][id='lifp']"));
-        password.sendKeys("Nomad44++");
+        password.sendKeys("Nomad07++");
 
         WebElement logInButton = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//input[@id='lfb']"))));
         logInButton.click();

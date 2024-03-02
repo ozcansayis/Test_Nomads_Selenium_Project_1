@@ -1,15 +1,13 @@
 package US_105;
 
+import Utility.BaseDriver;
 import Utility.MyFunction;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static Utility.BaseDriver.WaitAndClose;
-import static Utility.BaseDriver.driver;
-
-public class TC_0501 {
+public class TC_0501 extends BaseDriver {
     @Test
     public void TC_0501() {
         driver.get("https://www.akakce.com/");
@@ -18,10 +16,10 @@ public class TC_0501 {
         login.click();
 
         WebElement email = driver.findElement(By.cssSelector("[id='life']"));
-        email.sendKeys("technodeneme007@gmail.com");
+        email.sendKeys("testnomads01@gmail.com");
 
         WebElement password = driver.findElement(By.cssSelector("[id='lifp']"));
-        password.sendKeys("Deneme007");
+        password.sendKeys("Nomad07++");
         MyFunction.Wait(1);
 
         WebElement loginButton = driver.findElement(By.cssSelector("[id='lfb']"));
@@ -37,7 +35,7 @@ public class TC_0501 {
         myOrders.click();
 
         WebElement message = driver.findElement(By.cssSelector("[class='no-record']"));
-        Assert.assertTrue("Mesaj bulunamadı.", message.getText().equals("Kayıtlı siparişiniz bulunmuyor."));
+        Assert.assertEquals("Mesaj bulunamadı.", "Kayıtlı siparişiniz bulunmuyor.", message.getText());
 
         WaitAndClose();
     }

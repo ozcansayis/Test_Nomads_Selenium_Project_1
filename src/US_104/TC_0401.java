@@ -14,9 +14,9 @@ public class TC_0401 extends BaseDriver {
         WebElement girisYap = driver.findElement(By.linkText("Giriş Yap"));
         girisYap.click();
         WebElement email = driver.findElement(By.cssSelector("[id='life']"));
-        email.sendKeys("samfromda01@hotmail.com");
+        email.sendKeys("testnomads01@gmail.com");
         WebElement sifre = driver.findElement(By.cssSelector("[id='lifp']"));
-        sifre.sendKeys("lokmaciSeni1");
+        sifre.sendKeys("Nomad07++");
         WebElement girisYap2 = driver.findElement(By.cssSelector("[id='lfb']"));
         girisYap2.click();
 
