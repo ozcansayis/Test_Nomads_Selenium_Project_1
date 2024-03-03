@@ -6,14 +6,13 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
 public class TC_0102 extends BaseDriver {
     @Test
-    public void TC_0102(){
+    public void TC_0102() {
 
         driver.get("https://www.akakce.com/");
         MyFunction.Wait(1);
@@ -27,7 +26,7 @@ public class TC_0102 extends BaseDriver {
         MyFunction.Wait(1);
 
         WebElement surName = driver.findElement(By.cssSelector("input[id='rnufs']"));
-        surName.sendKeys("/*45");
+        surName.sendKeys("eser");
         MyFunction.Wait(1);
 
         WebElement mail = driver.findElement(By.cssSelector("input[id='rnufe1']"));
@@ -35,15 +34,15 @@ public class TC_0102 extends BaseDriver {
         MyFunction.Wait(1);
 
         WebElement confirmMail = driver.findElement(By.cssSelector("input[id='rnufe2']"));
-        confirmMail.sendKeys("testnomads01@gmail.com");
+        confirmMail.sendKeys("testnomads02@gmail.com");
         MyFunction.Wait(1);
 
         WebElement password = driver.findElement(By.cssSelector("input[id='rnufp1']"));
-        password.sendKeys("Nomad44++");
+        password.sendKeys("Nomad07++");
         MyFunction.Wait(1);
 
         WebElement confirmPassword = driver.findElement(By.cssSelector("input[id='rnufp2']"));
-        confirmPassword.sendKeys("Nomad44++");
+        confirmPassword.sendKeys("Nomad07++");
         MyFunction.Wait(1);
 
         //WebElement gender = driver.findElement(By.cssSelector("input[id='rngm']"));
@@ -61,22 +60,22 @@ public class TC_0102 extends BaseDriver {
         city2select.selectByValue("116");
         MyFunction.Wait(1);
 
-     // WebElement day = driver.findElement(By.cssSelector("select[id='bd']"));
-     // Select dayselect = new Select(day);
-     // dayselect.selectByValue("19");
-     // MyFunction.Wait(1);
+        // WebElement day = driver.findElement(By.cssSelector("select[id='bd']"));
+        // Select dayselect = new Select(day);
+        // dayselect.selectByValue("19");
+        // MyFunction.Wait(1);
         //dogum tarihleri boş birakilmistir.
 
-     // WebElement month = driver.findElement(By.cssSelector("select[id='bm']"));
-     // Select monthSelect = new Select(month);
-     // monthSelect.selectByValue("7");
-     // MyFunction.Wait(1);
+        // WebElement month = driver.findElement(By.cssSelector("select[id='bm']"));
+        // Select monthSelect = new Select(month);
+        // monthSelect.selectByValue("7");
+        // MyFunction.Wait(1);
         //dogum tarihleri boş birakilmistir.
 
-     // WebElement year = driver.findElement(By.cssSelector("select[id='by']"));
-     // Select yearSelect = new Select(year);
-     // yearSelect.selectByValue("1986");
-        //dogum tarihleri boş birakilmistir.
+        // WebElement year = driver.findElement(By.cssSelector("select[id='by']"));
+        // Select yearSelect = new Select(year);
+        // yearSelect.selectByValue("1986");
+        // dogum tarihleri boş birakilmistir.
 
         WebElement contract = driver.findElement(By.cssSelector("input[id='rnufpca']"));
         contract.click();
@@ -90,27 +89,13 @@ public class TC_0102 extends BaseDriver {
         openAccount.click();
         MyFunction.Wait(1);
 
-        List<WebElement> fault=driver.findElements(By.cssSelector("input[class='alertX t2']"));
+        List<WebElement> fault = driver.findElements(By.cssSelector("[class='alertX t2'] p"));
         if (fault.isEmpty()) {
-            System.out.println("Başarıyla kayıt olundu.");
-        }
-        else
-            System.out.println(fault.get(0).getText());
+            System.out.println("Kayıt başarılı!");
+        } else
+            System.out.println(fault.getFirst().getText());
+//        Assert.assertFalse("Kayıt başarılı!", fault.isEmpty());
 
-
-
-        MyFunction.Wait(1);
-
-
-
-
-
-
-
-
-
-
-
-
+        WaitAndClose();
     }
 }
