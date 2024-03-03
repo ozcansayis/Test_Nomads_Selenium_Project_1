@@ -33,6 +33,7 @@ public class TC_0301 extends BaseDriver {
         cikis.click();
         MyFunction.Wait(2);
 
+
         WebElement Giris1 = driver.findElement(By.linkText("Giriş Yap"));
         Giris1.click();
 
