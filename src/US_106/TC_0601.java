@@ -16,14 +16,14 @@ public class TC_0601 extends BaseDriver {
         WebElement logIn = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("div[id^='H_'] a[rel='nofollow']+a"))));
         logIn.click();
 
+
         //in pursuit of landing in the login page we enter the credentials starting with our e-mail address.
         WebElement eMail = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("input[id='life']"))));
         eMail.sendKeys("testnomads01@gmail.com");
 
         //we keep on going entering the password.
         WebElement password = driver.findElement(By.cssSelector("input[class='t'][id='lifp']"));
-        password.sendKeys("Nomad44++");
-
+        password.sendKeys("Nomad07++");
 
         WebElement logInButton = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//input[@id='lfb']"))));
         logInButton.click();
@@ -38,7 +38,8 @@ public class TC_0601 extends BaseDriver {
 
         //right after we get into 'mesajlarim' section we get to check if there is a message popping up in case of an empty message box.
         WebElement inBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#C4w>div>p")));
-        Assert.assertTrue("hata", inBox.getText().equals("Listelenecek mesaj bulunamadı."));
+        Assert.assertEquals("hata", "Listelenecek mesaj bulunamadı.", inBox.getText());
+
         WaitAndClose();
     }
 }
