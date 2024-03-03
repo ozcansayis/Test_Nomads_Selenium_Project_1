@@ -13,74 +13,92 @@ public class TC_0101 extends BaseDriver {
 
         driver.get("https://www.akakce.com/");
         MyFunction.Wait(1);
+        //Kullanici Akakce.com sitesini tarayıcıda açar.
 
         WebElement createAccount = driver.findElement(By.linkText("Hesap Aç"));
         createAccount.click();
         MyFunction.Wait(1);
+        //Kullanici ana sayfada bulunan "Hesap Oluştur" seçenegine tıklar.
 
         WebElement name = driver.findElement(By.cssSelector("input[id='rnufn']"));
         name.sendKeys("Test");
         MyFunction.Wait(1);
+        //Kullanici isim bilgisini eksiksiz doldurur.
 
         WebElement surName = driver.findElement(By.cssSelector("input[id='rnufs']"));
         surName.sendKeys("Nomads");
         MyFunction.Wait(1);
+        //Kullanici soyisim bilgisini eksiksiz doldurur.
 
         WebElement mail = driver.findElement(By.cssSelector("input[id='rnufe1']"));
         mail.sendKeys("testnomads01@gmail.com\n");
         MyFunction.Wait(1);
+        //Kullanici email adresini eksiksiz doldurur.
 
         WebElement confirmMail = driver.findElement(By.cssSelector("input[id='rnufe2']"));
         confirmMail.sendKeys("testnomads01@gmail.com\n");
         MyFunction.Wait(1);
+        //Kullanici email adresini tekrar eksiksiz doldurur.
 
         WebElement password = driver.findElement(By.cssSelector("input[id='rnufp1']"));
         password.sendKeys("Nomad44++");
         MyFunction.Wait(1);
+        //Kullanici eksiksiz sifre oluşturur.
 
         WebElement confirmPassword = driver.findElement(By.cssSelector("input[id='rnufp2']"));
         confirmPassword.sendKeys("Nomad44++");
         MyFunction.Wait(1);
+        //Kullanici sifreyi tekrar doldurur.
 
         WebElement gender = driver.findElement(By.cssSelector("input[id='rngm']"));
         gender.click();
         MyFunction.Wait(1);
+        //Kullanici cinsiyet secenegini tiklar.
+
 
         WebElement city = driver.findElement(By.cssSelector("select[id='locpr']"));
         Select citySel = new Select(city);
         citySel.selectByValue("9");
         MyFunction.Wait(1);
+        //Kullanici sehir bilgisini eksiksiz doldurur.
 
         WebElement city2 = driver.findElement(By.cssSelector("select[id='locds']"));
         Select city2select = new Select(city2);
         city2select.selectByValue("116");
         MyFunction.Wait(1);
+        //Kullanici ilce bilgisini eksiksiz doldurur.
 
         WebElement day = driver.findElement(By.cssSelector("select[id='bd']"));
         Select dayselect = new Select(day);
         dayselect.selectByValue("19");
         MyFunction.Wait(1);
+        //Kullanici dogum tarihinin gun kutucugunu tiklar.
 
         WebElement month = driver.findElement(By.cssSelector("select[id='bm']"));
         Select monthSelect = new Select(month);
         monthSelect.selectByValue("7");
         MyFunction.Wait(1);
+        //Kullanici dogum tarihinin ay kutucugunu tiklar.
 
         WebElement year = driver.findElement(By.cssSelector("select[id='by']"));
         Select yearSelect = new Select(year);
         yearSelect.selectByValue("1986");
+        //Kullanici dogum tarihinin yil kutucugunu tiklar.
 
         WebElement contract = driver.findElement(By.cssSelector("input[id='rnufpca']"));
         contract.click();
         MyFunction.Wait(1);
+        //Kullanici kullanım sozlesmesi bilgilendirme kutucugunu tiklar.
 
         WebElement discount = driver.findElement(By.cssSelector("input[id='rnufnee']"));
         discount.click();
         MyFunction.Wait(1);
+        //Kullanici kampanya bildirim sozlesmesi kutucugunu tiklar.
 
         WebElement openAccount = driver.findElement(By.cssSelector("input[id='rfb']"));
         openAccount.click();
         MyFunction.Wait(1);
+        //Kullanici hesap ac kutusunu tiklar.
 
         WaitAndClose();
 
