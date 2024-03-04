@@ -10,7 +10,7 @@ public class TC_0201 extends BaseDriver {
 
     @Test
 
-    public void test_2(){
+    public void TC_0201(){
         String Ad = "Test";
         // Kullanıcı, Akakce.com sitesine tarayıcı üzerinden giriş yapar.
         driver.get("https://www.akakce.com/");
@@ -25,19 +25,18 @@ public class TC_0201 extends BaseDriver {
 
         // Kullanıcı, kullanıcı şifresini doğru bir şekilde girer.
         WebElement Sifre = driver.findElement(By.cssSelector("input[id='lifp'][type='password']"));
-        Sifre.sendKeys("Nomad44++");
+        Sifre.sendKeys("Nomad07++");
 
-        // kullanıcı ekranda gözüken "Giriş Yap" butonuna tıklar.
+        // Kullanıcı ekranda gözüken "Giriş Yap" butonuna tıklar.
         driver.findElement(By.cssSelector("input[id='lfb'][type='submit']")).click();
 
         // Sağ üst köşede kullanıcı adının görüntülendiği alana bakar ve bu
-        //kullanıcı adının, giriş yapılırken girilen kullanıcı adı ile aynı olup olmadığını kontrol eder.
+        // kullanıcı adının, giriş yapılırken girilen kullanıcı adı ile aynı olup olmadığını kontrol eder.
         WebElement ad = driver.findElement(By.xpath("//div[@id='HM_v8']/i/a"));
 
-        //Eğer kullanıcı adı doğru görünüyorsa, hesap doğrulama sürecinin başarıyla tamamlandığını onaylar.
-        Assert.assertTrue(" Adlar uymadi", ad.getText().equals(Ad));
+        // Eğer kullanıcı adı doğru görünüyorsa, hesap doğrulama sürecinin başarıyla tamamlandığını onaylar.
+        Assert.assertEquals(" Adlar uymadi", ad.getText(), Ad);
 
         WaitAndClose();
-
     }
 }
