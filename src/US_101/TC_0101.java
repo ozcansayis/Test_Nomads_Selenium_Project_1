@@ -29,12 +29,12 @@ public class TC_0101 extends BaseDriver {
 
         //Kullanici email adresini eksiksiz doldurur.
         WebElement mail = driver.findElement(By.cssSelector("input[id='rnufe1']"));
-        mail.sendKeys("testnomads01@gmail.com\n");
+        mail.sendKeys("testnomads01@gmail.com");
         MyFunction.Wait(1);
 
         //Kullanici email adresini tekrar eksiksiz doldurur.
         WebElement confirmMail = driver.findElement(By.cssSelector("input[id='rnufe2']"));
-        confirmMail.sendKeys("testnomads01@gmail.com\n");
+        confirmMail.sendKeys("testnomads01@gmail.com");
         MyFunction.Wait(1);
 
         //Kullanici eksiksiz sifre oluşturur.

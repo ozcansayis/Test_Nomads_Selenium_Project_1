@@ -17,10 +17,10 @@ public class TC_0301 extends BaseDriver {
         MyFunction.Wait(1);
 
         WebElement email = driver.findElement(By.cssSelector("input[name='life'][type='email']"));
-        email.sendKeys("yag@gmail.com.tr");
+        email.sendKeys("testnomads01@gmail.com");
 
         WebElement sifre = driver.findElement(By.cssSelector("input[id='lifp'][name='lifp']"));
-        sifre.sendKeys("890ıop.aA");
+        sifre.sendKeys("Nomad07++");
 
         WebElement girisyap = driver.findElement(By.cssSelector("[id='lfb']"));
         girisyap.click();
@@ -33,12 +33,9 @@ public class TC_0301 extends BaseDriver {
         cikis.click();
         MyFunction.Wait(2);
 
-
         WebElement Giris1 = driver.findElement(By.linkText("Giriş Yap"));
         Giris1.click();
 
         WaitAndClose();
     }
 }
-
-
