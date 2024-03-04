@@ -20,11 +20,11 @@ public class TC_0301 extends BaseDriver {
 
         //Kullanıcı mail bilgisini eksiksiz doldurur
         WebElement email = driver.findElement(By.cssSelector("input[name='life'][type='email']"));
-        email.sendKeys("yag@gmail.com.tr");
+        email.sendKeys("testnomads01@gmail.com");
 
         //Kullanıcı şifre bilgisini eksiksiz doldurur
         WebElement sifre = driver.findElement(By.cssSelector("input[id='lifp'][name='lifp']"));
-        sifre.sendKeys("890ıop.aA");
+        sifre.sendKeys("Nomad07++");
 
         //Kullanıcı Giriş yap butonuna tıklar
         WebElement girisyap = driver.findElement(By.cssSelector("[id='lfb']"));
@@ -47,5 +47,3 @@ public class TC_0301 extends BaseDriver {
         WaitAndClose();
     }
 }
-
-
