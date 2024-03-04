@@ -1,15 +1,13 @@
 package US_105;
 
+import Utility.BaseDriver;
 import Utility.MyFunction;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static Utility.BaseDriver.WaitAndClose;
-import static Utility.BaseDriver.driver;
-
-public class TC_0501 {
+public class TC_0501 extends BaseDriver {
     @Test
     public void TC_0501() {
         // Akakce.com website opened in browser.
@@ -21,10 +19,10 @@ public class TC_0501 {
 
         // Entered valid information from the test data.
         WebElement email = driver.findElement(By.cssSelector("[id='life']"));
-        email.sendKeys("technodeneme007@gmail.com");
+        email.sendKeys("testnomads01@gmail.com");
 
         WebElement password = driver.findElement(By.cssSelector("[id='lifp']"));
-        password.sendKeys("Deneme007");
+        password.sendKeys("Nomad07++");
         MyFunction.Wait(1);
 
         // Clicks on the "Login" button.
