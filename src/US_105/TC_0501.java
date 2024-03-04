@@ -25,18 +25,18 @@ public class TC_0501 extends BaseDriver {
         password.sendKeys("Nomad07++");
         MyFunction.Wait(1);
 
-        // Clicks on the "Login" button.
+        // Clicks on the "Giriş Yap" button.
         WebElement loginButton = driver.findElement(By.cssSelector("[id='lfb']"));
         loginButton.click();
         MyFunction.Wait(1);
 
-        // Navigated to the profile page by clicking on the "My Account" link from the account section located at the top right corner homepage.
+        // Navigated to the profile page by clicking on the "Hesabım" link from the account section located at the top right corner homepage.
         WebElement myAccount = driver.findElement(By.cssSelector("div[id='HM_v8'] a"));
         // WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#HM_v8 >i> a")));
         myAccount.click();
-        MyFunction.Wait(1);
+        MyFunction.Wait(2);
 
-        // On the profile page, click on the "My Orders" link to be redirected to the order list.
+        // On the profile page, click on the "Siparişlerim" link to be redirected to the order list.
         WebElement myOrders = driver.findElement(By.cssSelector("[id='AL'] a[href='/akakcem/siparislerim/']"));
         myOrders.click();
 
