@@ -23,18 +23,17 @@ public class TC_0501 extends BaseDriver {
 
         WebElement password = driver.findElement(By.cssSelector("[id='lifp']"));
         password.sendKeys("Nomad07++");
-        MyFunction.Wait(1);
 
         // Clicks on the "Giriş Yap" button.
         WebElement loginButton = driver.findElement(By.cssSelector("[id='lfb']"));
         loginButton.click();
         MyFunction.Wait(1);
 
-        // Navigated to the profile page by clicking on the "Hesabım" link from the account section located at the top right corner homepage.
+        // Navigated to the profile page by clicking on the "Hesabım" link from the account section located in the top right corner homepage.
         WebElement myAccount = driver.findElement(By.cssSelector("div[id='HM_v8'] a"));
         // WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#HM_v8 >i> a")));
         myAccount.click();
-        MyFunction.Wait(2);
+        MyFunction.Wait(1);
 
         // On the profile page, click on the "Siparişlerim" link to be redirected to the order list.
         WebElement myOrders = driver.findElement(By.cssSelector("[id='AL'] a[href='/akakcem/siparislerim/']"));
@@ -42,7 +41,7 @@ public class TC_0501 extends BaseDriver {
 
         // If the order list is empty, it checks if an appropriate message is displayed.
         WebElement message = driver.findElement(By.cssSelector("[class='no-record']"));
-        Assert.assertTrue("Mesaj bulunamadı.", message.getText().equals("Kayıtlı siparişiniz bulunmuyor."));
+        Assert.assertEquals("Mesaj bulunamadı.", "Kayıtlı siparişiniz bulunmuyor.", message.getText());
 
         WaitAndClose();
     }
