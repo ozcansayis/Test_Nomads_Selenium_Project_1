@@ -36,7 +36,7 @@ public class TC_0501 {
         WebElement myAccount = driver.findElement(By.cssSelector("div[id='HM_v8'] a"));
         // WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#HM_v8 >i> a")));
         myAccount.click();
-        MyFunction.Wait(1);
+        MyFunction.Wait(2);
 
         // On the profile page, click on the "Siparişlerim" link to be redirected to the order list.
         WebElement myOrders = driver.findElement(By.cssSelector("[id='AL'] a[href='/akakcem/siparislerim/']"));
