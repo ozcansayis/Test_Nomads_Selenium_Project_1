@@ -13,7 +13,7 @@ import java.util.List;
 
 public class TC_0102 extends BaseDriver {
     @Test
-    public void TC_0102(){
+    public void TC_0102() {
 
         //Kullanici Akakce.com sitesini tarayıcıda açar.
         driver.get("https://www.akakce.com/");
@@ -88,15 +88,15 @@ public class TC_0102 extends BaseDriver {
         //Kullanici hesap ac kutusunu tiklar.
         WebElement openAccount = driver.findElement(By.cssSelector("input[id='rfb']"));
         openAccount.click();
+        MyFunction.Wait(1);
 
         // eksik veya hatali girilen bilginin uyarisi kullaniciya gosterilir.
-        List<WebElement> fault=driver.findElements(By.cssSelector("input[class='alertX t2']"));
+        List<WebElement> fault = driver.findElements(By.cssSelector("div[class='alertX t2'] p"));
         if (fault.isEmpty()) {
             System.out.println("Başarıyla kayıt olundu.");
+        } else {
+            System.out.println("Alınan hata: "+fault.get(0).getText()); // İlk elemanın metnini al
         }
-        else
-            System.out.println(fault.get(0).getText());
-      
         WaitAndClose();
     }
 }

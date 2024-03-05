@@ -9,8 +9,7 @@ import org.openqa.selenium.WebElement;
 public class TC_0201 extends BaseDriver {
 
     @Test
-
-    public void TC_0201(){
+    public void TC_0201() {
         String Ad = "Test";
         // Kullanıcı, Akakce.com sitesine tarayıcı üzerinden giriş yapar.
         driver.get("https://www.akakce.com/");
@@ -36,6 +35,9 @@ public class TC_0201 extends BaseDriver {
 
         // Eğer kullanıcı adı doğru görünüyorsa, hesap doğrulama sürecinin başarıyla tamamlandığını onaylar.
         Assert.assertEquals(" Adlar uymadi", ad.getText(), Ad);
+        if (ad.getText().equals(Ad))
+            System.out.println("Kullanıcı adı görüntülendi!");
+
 
         WaitAndClose();
     }

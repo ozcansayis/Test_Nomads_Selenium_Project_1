@@ -8,13 +8,13 @@ import org.openqa.selenium.WebElement;
 
 public class TC_0401 extends BaseDriver {
     @Test
-    public void TC_401() {
-        //siteye yönlendirildi
+    public void TC_0401() {
+        // Siteye yönlendirildi
         driver.get("https://www.akakce.com/");
-        //giriş yap butonuna tıklandı
+        // Giriş yap butonuna tıklandı
         WebElement girisYap = driver.findElement(By.linkText("Giriş Yap"));
         girisYap.click();
-        //kullanıcıdan email ve şifresi yazılıp 'Giriş yap' butonuna tıkla
+        // Kullanıcı emaili ve şifresi yazılıp "Giriş Yap" butonuna tıklandı
         WebElement email = driver.findElement(By.cssSelector("[id='life']"));
         email.sendKeys("testnomads01@gmail.com");
         WebElement sifre = driver.findElement(By.cssSelector("[id='lifp']"));

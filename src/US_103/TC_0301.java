@@ -5,6 +5,7 @@ import Utility.MyFunction;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class TC_0301 extends BaseDriver {
 
@@ -16,7 +17,6 @@ public class TC_0301 extends BaseDriver {
         //Kullanıcı Giriş yap sayfasını tıklar
         WebElement Giris = driver.findElement(By.linkText("Giriş Yap"));
         Giris.click();
-        MyFunction.Wait(1);
 
         //Kullanıcı mail bilgisini eksiksiz doldurur
         WebElement email = driver.findElement(By.cssSelector("input[name='life'][type='email']"));
@@ -29,6 +29,7 @@ public class TC_0301 extends BaseDriver {
         //Kullanıcı Giriş yap butonuna tıklar
         WebElement girisyap = driver.findElement(By.cssSelector("[id='lfb']"));
         girisyap.click();
+        MyFunction.Wait(1);
 
         //Kullanıcı hesabım butonuna tıklar
         WebElement hesabim = driver.findElement(By.xpath("//a[@title='Hesabım']"));
