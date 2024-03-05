@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TC_0201 extends BaseDriver {
-
     @Test
     public void TC_0201() {
         String Ad = "Test";

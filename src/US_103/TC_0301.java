@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class TC_0301 extends BaseDriver {
-
     @Test
     public void Test() {
         //Kullanıcı Akakçe.com sitesi tarayıcı açar
