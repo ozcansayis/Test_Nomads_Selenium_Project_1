@@ -57,7 +57,3 @@ Special thanks to all team members for their contributions, dedication, and hard
 ## Acknowledgements
 
 Our heartfelt appreciation goes to our bootcamp mentors and instructors for their invaluable guidance and support. This project would not have been possible without their expertise and encouragement.
-
-## Note
-
-This project has been completed and is not actively seeking contributions. However, we welcome you to fork the repository for your personal use and experimentation.
